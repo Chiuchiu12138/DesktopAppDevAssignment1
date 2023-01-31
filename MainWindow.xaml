@@ -21,6 +21,7 @@
         <Label x:Name="price1" Content="Price(CAD)/kg" HorizontalAlignment="Left" Margin="59,136,0,0" VerticalAlignment="Top" FontSize="20"/>
         <TextBox x:Name="price" HorizontalAlignment="Left" Margin="239,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="20"/>
         <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="27,199,229,38"/>
+        <Button x:Name="viewData" Content="View Data" HorizontalAlignment="Left" Margin="622,345,0,0" VerticalAlignment="Top" FontSize="20" Click="ViewData_Click"/>
 
     </Grid>
 </Window>

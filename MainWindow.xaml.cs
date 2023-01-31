@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -106,7 +107,26 @@ namespace DesptopAppDevAssignment1
             {
                 MessageBox.Show(ex.Message);
             }
+        }
 
+        private void ViewData_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                con.Open();// First step is to open the SQL connection in your application
+                string query = "select * from productTable";// Generate the database query
+                SqlCommand cmd = new SqlCommand(query, con);// Generate the SQL command query for the application
+                SqlDataAdapter da = new SqlDataAdapter(cmd);//Create a data adapter which will work as a bridge in between the front-end, datagrid and the back-end database.
+                DataTable dt = new DataTable();//We need a table view for our dataGrid. so we are creating the dataTable schema over here
+                da.Fill(dt);// We need to pass the datatable to the adapter
+                dataGrid.ItemsSource = dt.AsDataView();
+                DataContext = da;
+                con.Close();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
