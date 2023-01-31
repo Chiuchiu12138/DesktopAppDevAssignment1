@@ -73,7 +73,7 @@ namespace DesptopAppDevAssignment1
             try
             {
                 con.Open();
-                string query = "Update productTable set productName=@productName, amountKG=@amountKG, price=@price where productID = @productID";
+                string query = "Update productTable set Product_Name = @productName, KG = @amountKG, Price = @price where Product_ID = @productID";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@productID", int.Parse(@productID.Text));
                 cmd.Parameters.AddWithValue("@productName", productName.Text);
@@ -95,7 +95,7 @@ namespace DesptopAppDevAssignment1
             try
             {
                 con.Open();
-                string query = "Delete studentTable where productID = @productID";
+                string query = "Delete productTable where Product_ID = @productID";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@productID", int.Parse(productID.Text));
                 cmd.ExecuteNonQuery();
