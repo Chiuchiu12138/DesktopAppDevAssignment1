@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DesktopAppDevAssignment_1;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -51,12 +53,12 @@ namespace DesptopAppDevAssignment1
             {
                 //Open the Database Connect
                 con.Open();
-                string query = "Insert into productTable values(@productID, @productName, @amountKG, @price) "; //We need to call the textBox and then grab the text
+                string query = "Insert into productTable values(@productID, @productName,  @price, @amountKG) "; //We need to call the textBox and then grab the text
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@productID", int.Parse(productID.Text));
                 cmd.Parameters.AddWithValue("@productName", productName.Text);
-                cmd.Parameters.AddWithValue("@amountKG", int.Parse(amountKG.Text));
                 cmd.Parameters.AddWithValue("@price", float.Parse(price.Text));
+                cmd.Parameters.AddWithValue("@amountKG", int.Parse(amountKG.Text));
 
                 //We now need to execute our query
                 cmd.ExecuteNonQuery();
@@ -74,12 +76,12 @@ namespace DesptopAppDevAssignment1
             try
             {
                 con.Open();
-                string query = "Update productTable set Product_Name = @productName, KG = @amountKG, Price = @price where Product_ID = @productID";
+                string query = "Update productTable set Product_Name = @productName,  Price = @price, KG_Inventory = @amountKG where Product_ID = @productID";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@productID", int.Parse(@productID.Text));
                 cmd.Parameters.AddWithValue("@productName", productName.Text);
-                cmd.Parameters.AddWithValue("@amountKG", int.Parse(amountKG.Text));
                 cmd.Parameters.AddWithValue("@price", float.Parse(price.Text));
+                cmd.Parameters.AddWithValue("@amountKG", int.Parse(amountKG.Text));
 
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Updated perfectly into the database");
@@ -99,6 +101,7 @@ namespace DesptopAppDevAssignment1
                 string query = "Delete productTable where Product_ID = @productID";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@productID", int.Parse(productID.Text));
+
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Deleted peoperly");
                 con.Close();
@@ -121,6 +124,36 @@ namespace DesptopAppDevAssignment1
                 da.Fill(dt);// We need to pass the datatable to the adapter
                 dataGrid.ItemsSource = dt.AsDataView();
                 DataContext = da;
+                con.Close();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void goToSale_Click(object sender, RoutedEventArgs e)
+        {
+            //if cart is empty, create new sales
+            //else, dont create new sales?
+            Sales sales = new Sales();
+            this.Visibility = Visibility.Hidden;
+            sales.Show();
+        }
+
+        private void Select_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                con.Open();
+                string query = "Insert into cartTable values(@productID, @productName,  @price, @amountKG) "; //We need to call the textBox and then grab the text
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@productID", int.Parse(productID.Text));
+                cmd.Parameters.AddWithValue("@productName", productName.Text);
+                cmd.Parameters.AddWithValue("@price", float.Parse(price.Text));
+                cmd.Parameters.AddWithValue("@amountKG", int.Parse(amountKG.Text));
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Added successfully to the cart");
                 con.Close();
             }
             catch (SqlException ex)

@@ -15,3 +15,4 @@ C:\Users\jklpp\OneDrive\Desktop\VS Workspace\DesktopAppDevAssignment_1\obj\Debug
 C:\Users\jklpp\OneDrive\Desktop\VS Workspace\DesktopAppDevAssignment_1\obj\Debug\DesktopAppDevAssignment_1.exe
 C:\Users\jklpp\OneDrive\Desktop\VS Workspace\DesktopAppDevAssignment_1\obj\Debug\DesktopAppDevAssignment_1.pdb
 C:\Users\jklpp\OneDrive\Desktop\VS Workspace\DesktopAppDevAssignment_1\obj\Debug\Sales.g.cs
+C:\Users\jklpp\OneDrive\Desktop\VS Workspace\DesktopAppDevAssignment_1\obj\Debug\Sales.baml
