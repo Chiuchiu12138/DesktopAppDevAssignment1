@@ -1,0 +1,8 @@
+C:\Users\-_-\source\repos\TestingSQL\TestingSQL\bin\Debug\TestingSQL.exe.config
+C:\Users\-_-\source\repos\TestingSQL\TestingSQL\bin\Debug\TestingSQL.exe
+C:\Users\-_-\source\repos\TestingSQL\TestingSQL\bin\Debug\TestingSQL.pdb
+C:\Users\-_-\source\repos\TestingSQL\TestingSQL\obj\Debug\TestingSQL.csproj.AssemblyReference.cache
+C:\Users\-_-\source\repos\TestingSQL\TestingSQL\obj\Debug\TestingSQL.csproj.SuggestedBindingRedirects.cache
+C:\Users\-_-\source\repos\TestingSQL\TestingSQL\obj\Debug\TestingSQL.csproj.CoreCompileInputs.cache
+C:\Users\-_-\source\repos\TestingSQL\TestingSQL\obj\Debug\TestingSQL.exe
+C:\Users\-_-\source\repos\TestingSQL\TestingSQL\obj\Debug\TestingSQL.pdb
