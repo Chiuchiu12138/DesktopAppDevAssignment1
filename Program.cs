@@ -13,10 +13,18 @@ namespace TestingSQL
         {
 
 
-            // ...
+            // ... designing tests to incorperate into main class..
+
+
+
+            string fruit = "Raspberry";                 // input from textbox...
+            decimal weight = Convert.ToDecimal(12);     // input from textbox...
+
+
+
 
             string connectionString = "Data Source=DESKTOP-V50PKCU\\SQLEXPRESS;Initial Catalog=A1;Integrated Security=True;";
-            string sql = "select Price from dbo.productTable where Product_Name = 'Apple'";
+            string sql = "select Price from dbo.productTable where Product_Name = '"+fruit+"'";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -30,11 +38,12 @@ namespace TestingSQL
                         {
 
                             double temp = reader.GetDouble(0);
+                            decimal price = Convert.ToDecimal(temp);
+                            decimal finalPrice = weight * price;
+                            Console.WriteLine("your final price :" + finalPrice);
 
-                            Console.WriteLine(temp);
-                           // Console.WriteLine(reader["Price"]);
-                            
-                           
+
+
 
                         }
                         Console.ReadKey();
