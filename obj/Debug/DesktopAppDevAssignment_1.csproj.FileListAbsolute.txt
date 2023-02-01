@@ -1,0 +1,35 @@
+C:\Users\jklpp\OneDrive\Desktop\VS Workspace\DesktopAppDevAssignment_1\obj\Debug\DesktopAppDevAssignment_1.csproj.AssemblyReference.cache
+C:\Users\jklpp\OneDrive\Desktop\VS Workspace\DesktopAppDevAssignment_1\obj\Debug\DesktopAppDevAssignment_1.csproj.SuggestedBindingRedirects.cache
+C:\Users\jklpp\OneDrive\Desktop\VS Workspace\DesktopAppDevAssignment_1\obj\Debug\MainWindow.g.cs
+C:\Users\jklpp\OneDrive\Desktop\VS Workspace\DesktopAppDevAssignment_1\obj\Debug\App.g.cs
+C:\Users\jklpp\OneDrive\Desktop\VS Workspace\DesktopAppDevAssignment_1\obj\Debug\DesktopAppDevAssignment_1_MarkupCompile.cache
+C:\Users\jklpp\OneDrive\Desktop\VS Workspace\DesktopAppDevAssignment_1\obj\Debug\DesktopAppDevAssignment_1_MarkupCompile.lref
+C:\Users\jklpp\OneDrive\Desktop\VS Workspace\DesktopAppDevAssignment_1\bin\Debug\DesktopAppDevAssignment_1.exe.config
+C:\Users\jklpp\OneDrive\Desktop\VS Workspace\DesktopAppDevAssignment_1\bin\Debug\DesktopAppDevAssignment_1.exe
+C:\Users\jklpp\OneDrive\Desktop\VS Workspace\DesktopAppDevAssignment_1\bin\Debug\DesktopAppDevAssignment_1.pdb
+C:\Users\jklpp\OneDrive\Desktop\VS Workspace\DesktopAppDevAssignment_1\obj\Debug\MainWindow.baml
+C:\Users\jklpp\OneDrive\Desktop\VS Workspace\DesktopAppDevAssignment_1\obj\Debug\DesktopAppDevAssignment_1.g.resources
+C:\Users\jklpp\OneDrive\Desktop\VS Workspace\DesktopAppDevAssignment_1\obj\Debug\DesktopAppDevAssignment_1.Properties.Resources.resources
+C:\Users\jklpp\OneDrive\Desktop\VS Workspace\DesktopAppDevAssignment_1\obj\Debug\DesktopAppDevAssignment_1.csproj.GenerateResource.cache
+C:\Users\jklpp\OneDrive\Desktop\VS Workspace\DesktopAppDevAssignment_1\obj\Debug\DesktopAppDevAssignment_1.csproj.CoreCompileInputs.cache
+C:\Users\jklpp\OneDrive\Desktop\VS Workspace\DesktopAppDevAssignment_1\obj\Debug\DesktopAppDevAssignment_1.exe
+C:\Users\jklpp\OneDrive\Desktop\VS Workspace\DesktopAppDevAssignment_1\obj\Debug\DesktopAppDevAssignment_1.pdb
+C:\Users\jklpp\OneDrive\Desktop\VS Workspace\DesktopAppDevAssignment_1\obj\Debug\Sales.g.cs
+C:\Users\Kazic\Desktop\School\Desktop Application Development\Projects\A1\DesktopAppDevAssignment1-Chaohao_branch\bin\Debug\DesktopAppDevAssignment_1.exe.config
+C:\Users\Kazic\Desktop\School\Desktop Application Development\Projects\A1\DesktopAppDevAssignment1-Chaohao_branch\bin\Debug\DesktopAppDevAssignment_1.exe
+C:\Users\Kazic\Desktop\School\Desktop Application Development\Projects\A1\DesktopAppDevAssignment1-Chaohao_branch\bin\Debug\DesktopAppDevAssignment_1.pdb
+C:\Users\Kazic\Desktop\School\Desktop Application Development\Projects\A1\DesktopAppDevAssignment1-Chaohao_branch\obj\Debug\DesktopAppDevAssignment_1.csproj.AssemblyReference.cache
+C:\Users\Kazic\Desktop\School\Desktop Application Development\Projects\A1\DesktopAppDevAssignment1-Chaohao_branch\obj\Debug\DesktopAppDevAssignment_1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Kazic\Desktop\School\Desktop Application Development\Projects\A1\DesktopAppDevAssignment1-Chaohao_branch\obj\Debug\MainWindow.g.cs
+C:\Users\Kazic\Desktop\School\Desktop Application Development\Projects\A1\DesktopAppDevAssignment1-Chaohao_branch\obj\Debug\Sales.g.cs
+C:\Users\Kazic\Desktop\School\Desktop Application Development\Projects\A1\DesktopAppDevAssignment1-Chaohao_branch\obj\Debug\App.g.cs
+C:\Users\Kazic\Desktop\School\Desktop Application Development\Projects\A1\DesktopAppDevAssignment1-Chaohao_branch\obj\Debug\DesktopAppDevAssignment_1_MarkupCompile.cache
+C:\Users\Kazic\Desktop\School\Desktop Application Development\Projects\A1\DesktopAppDevAssignment1-Chaohao_branch\obj\Debug\DesktopAppDevAssignment_1_MarkupCompile.lref
+C:\Users\Kazic\Desktop\School\Desktop Application Development\Projects\A1\DesktopAppDevAssignment1-Chaohao_branch\obj\Debug\MainWindow.baml
+C:\Users\Kazic\Desktop\School\Desktop Application Development\Projects\A1\DesktopAppDevAssignment1-Chaohao_branch\obj\Debug\Sales.baml
+C:\Users\Kazic\Desktop\School\Desktop Application Development\Projects\A1\DesktopAppDevAssignment1-Chaohao_branch\obj\Debug\DesktopAppDevAssignment_1.g.resources
+C:\Users\Kazic\Desktop\School\Desktop Application Development\Projects\A1\DesktopAppDevAssignment1-Chaohao_branch\obj\Debug\DesktopAppDevAssignment_1.Properties.Resources.resources
+C:\Users\Kazic\Desktop\School\Desktop Application Development\Projects\A1\DesktopAppDevAssignment1-Chaohao_branch\obj\Debug\DesktopAppDevAssignment_1.csproj.GenerateResource.cache
+C:\Users\Kazic\Desktop\School\Desktop Application Development\Projects\A1\DesktopAppDevAssignment1-Chaohao_branch\obj\Debug\DesktopAppDevAssignment_1.csproj.CoreCompileInputs.cache
+C:\Users\Kazic\Desktop\School\Desktop Application Development\Projects\A1\DesktopAppDevAssignment1-Chaohao_branch\obj\Debug\DesktopAppDevAssignment_1.exe
+C:\Users\Kazic\Desktop\School\Desktop Application Development\Projects\A1\DesktopAppDevAssignment1-Chaohao_branch\obj\Debug\DesktopAppDevAssignment_1.pdb
