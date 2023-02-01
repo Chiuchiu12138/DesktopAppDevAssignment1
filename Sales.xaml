@@ -7,15 +7,19 @@
         mc:Ignorable="d"
         Title="Sales" Height="450" Width="800">
     <Grid>
-        <Button x:Name="adminButton" Content="GO BACK TO ADMIN" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="69" Width="199" Click="adminButton_Click" FontSize="20"/>
-        <Button x:Name="payButton" Content="CHECKOUT" HorizontalAlignment="Left" Margin="596,357,0,0" VerticalAlignment="Top" Height="42" Width="173" FontSize="20" Click="payButton_Click"/>
-        <TextBox x:Name="nameTextbox" HorizontalAlignment="Left" Margin="73,134,0,0" TextWrapping="Wrap" Text="ITEM NAME" VerticalAlignment="Top" Width="136" FontSize="20"/>
-        <TextBox x:Name="weightTextBox" HorizontalAlignment="Left" Margin="316,134,0,0" TextWrapping="Wrap" Text="ITEM WEIGHT" VerticalAlignment="Top" Width="136" FontSize="20"/>
-        <TextBox x:Name="finalPriceTextbox" HorizontalAlignment="Left" Margin="596,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="173" Height="46" FontSize="20"/>
-        <Button x:Name="connectionButtonSales" Content="CONNECT" HorizontalAlignment="Left" Margin="596,75,0,0" VerticalAlignment="Top" FontSize="20" Height="42" Width="173" Click="connectionButtonSales_Click"/>
-        <Button x:Name="addButton" Content="ADD" HorizontalAlignment="Left" Margin="241,170,0,0" VerticalAlignment="Top" FontSize="20" Click="addButton_Click"/>
-        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="45,239,319,25" SelectionChanged="DataGrid_SelectionChanged"/>
-        <Button x:Name="cancelButton" Content="CANCEL" HorizontalAlignment="Left" Margin="596,296,0,0" VerticalAlignment="Top" FontSize="20" Height="40" Width="173" Click="cancelButton_Click"/>
-        <Label Content="FINAL PRICE" HorizontalAlignment="Left" Margin="596,157,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="181*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="adminButton" Content="GO BACK TO ADMIN" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="69" Width="199" Click="adminButton_Click" FontSize="20" Grid.ColumnSpan="2"/>
+        <Button x:Name="payButton" Content="CHECKOUT" HorizontalAlignment="Left" Margin="520,357,0,0" VerticalAlignment="Top" Height="42" Width="173" FontSize="20" Click="payButton_Click" Grid.Column="1"/>
+        <TextBox x:Name="nameTextbox" HorizontalAlignment="Left" Margin="73,134,0,0" TextWrapping="Wrap" Text="ITEM NAME" VerticalAlignment="Top" Width="136" FontSize="20" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="weightTextBox" HorizontalAlignment="Left" Margin="240,134,0,0" TextWrapping="Wrap" Text="ITEM WEIGHT" VerticalAlignment="Top" Width="136" FontSize="20" Grid.Column="1"/>
+        <TextBox x:Name="finalPriceTextbox" HorizontalAlignment="Left" Margin="520,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="173" Height="46" FontSize="20" Grid.Column="1"/>
+        <Button x:Name="connectionButtonSales" Content="CONNECT" HorizontalAlignment="Left" Margin="520,75,0,0" VerticalAlignment="Top" FontSize="20" Height="42" Width="173" Click="connectionButtonSales_Click" Grid.Column="1"/>
+        <Button x:Name="addButton" Content="ADD" HorizontalAlignment="Left" Margin="165,170,0,0" VerticalAlignment="Top" FontSize="20" Click="addButton_Click" Grid.Column="1"/>
+        <DataGrid x:Name="dataGrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="45,239,319,25" SelectionChanged="DataGrid_SelectionChanged" Grid.ColumnSpan="2"/>
+        <Button x:Name="cancelButton" Content="CANCEL" HorizontalAlignment="Left" Margin="520,296,0,0" VerticalAlignment="Top" FontSize="20" Height="40" Width="173" Click="cancelButton_Click" Grid.Column="1"/>
+        <Label Content="FINAL PRICE" HorizontalAlignment="Left" Margin="520,157,0,0" VerticalAlignment="Top" FontSize="20" Grid.Column="1"/>
     </Grid>
 </Window>
