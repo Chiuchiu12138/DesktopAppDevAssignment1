@@ -138,6 +138,8 @@ namespace DesptopAppDevAssignment1
 
         private void salesButton_Click(object sender, RoutedEventArgs e)
         {
+            //if cart is empty, create new sales
+            //else, dont create new sales
             Sales sales = new Sales();
             this.Visibility = Visibility.Hidden;
             sales.Show();
