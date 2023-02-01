@@ -37,7 +37,31 @@ namespace DesktopAppDevAssignment_1
 
         private void payButton_Click(object sender, RoutedEventArgs e)
         {
-            //deduct kg from inventory on admin page
+            //update inventory
+            //display message
+            //clear cart table for next customer
+        }
+
+        private void connectionButtonSales_Click(object sender, RoutedEventArgs e)
+        {
+            //establish connection to database?
+        }
+
+        private void cancelButton_Click(object sender, RoutedEventArgs e)
+        {
+            //remove everything from cart
+        }
+
+        private void addButton_Click(object sender, RoutedEventArgs e)
+        {
+            //try catch to see if name and kg exists in present inventory
+            //calculate price for each item
+            //return final price value to send to final price textbox
+        }
+
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //cart table
         }
     }
 }

@@ -132,14 +132,13 @@ namespace DesptopAppDevAssignment1
 
         private void select_Click(object sender, RoutedEventArgs e)
         {
-            //send to sales
-            //add a popup message confirming items were sent to cart
+            //?? Not sure what this does.
         }
 
         private void salesButton_Click(object sender, RoutedEventArgs e)
         {
             //if cart is empty, create new sales
-            //else, dont create new sales
+            //else, dont create new sales?
             Sales sales = new Sales();
             this.Visibility = Visibility.Hidden;
             sales.Show();
