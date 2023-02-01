@@ -34,5 +34,10 @@ namespace DesktopAppDevAssignment_1
             this.Visibility = Visibility.Hidden;
             admin.Show();
         }
+
+        private void payButton_Click(object sender, RoutedEventArgs e)
+        {
+            //deduct kg from inventory on admin page
+        }
     }
 }

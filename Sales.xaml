@@ -8,10 +8,10 @@
         Title="Sales" Height="450" Width="800">
     <Grid>
         <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="105,46,331,267"/>
-        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="105,234,203,43"/>
-        <Button x:Name="adminButton" Content="Go Back To Admin" HorizontalAlignment="Left" Margin="617,98,0,0" VerticalAlignment="Top" Height="69" Width="173" Click="adminButton_Click" FontSize="20"/>
-        <Button x:Name="payButton" Content="OK to Pay" HorizontalAlignment="Left" Margin="617,296,0,0" VerticalAlignment="Top" Height="42" Width="173" FontSize="20"/>
-        <TextBox x:Name="cartTitle" HorizontalAlignment="Left" Margin="24,98,0,0" TextWrapping="Wrap" Text="CART" VerticalAlignment="Top" Width="76"/>
-        <TextBox x:Name="totalSalesTitle" HorizontalAlignment="Left" Margin="24,296,0,0" TextWrapping="Wrap" Text="TOTAL SALES" VerticalAlignment="Top" Width="76"/>
+        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="105,246,331,66"/>
+        <Button x:Name="adminButton" Content="Go Back To Admin" HorizontalAlignment="Left" Margin="576,96,0,0" VerticalAlignment="Top" Height="69" Width="173" Click="adminButton_Click" FontSize="20"/>
+        <Button x:Name="payButton" Content="OK to Pay" HorizontalAlignment="Left" Margin="576,296,0,0" VerticalAlignment="Top" Height="42" Width="173" FontSize="20"/>
+        <Label x:Name="cartTitle1" Content="CART" HorizontalAlignment="Left" Margin="28,96,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label x:Name="totalSalesTitle1" Content="TOTAL&#xD;&#xA;SALES" HorizontalAlignment="Left" Margin="24,275,0,0" VerticalAlignment="Top" FontSize="20"/>
     </Grid>
 </Window>

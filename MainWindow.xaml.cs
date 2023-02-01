@@ -132,9 +132,8 @@ namespace DesptopAppDevAssignment1
 
         private void select_Click(object sender, RoutedEventArgs e)
         {
-            Sales sales = new Sales();
-            this.Visibility = Visibility.Hidden;
-            sales.Show();
+            //send to sales
+            //add a popup message confirming items were sent to cart
         }
 
         private void salesButton_Click(object sender, RoutedEventArgs e)
