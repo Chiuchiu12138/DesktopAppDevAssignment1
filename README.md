@@ -1,7 +1,5 @@
 # DesktopAppDevAssignment1
 
-#### FOR FINAL CODE: please see Chaohao_branch.
-
 This program is a simple inventory tracker for a shop with the ability to add to cart for customer service checkout.
 
 
