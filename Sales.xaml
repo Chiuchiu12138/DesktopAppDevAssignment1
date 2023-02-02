@@ -9,7 +9,7 @@
     <Grid>
         <Button x:Name="goBackToAdmin" Content="Go back to Admin" HorizontalAlignment="Left" Margin="580,31,0,0" VerticalAlignment="Top" FontSize="20" Click="goBackToAdmin_Click"/>
         <DataGrid x:Name="cartGrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="177,135,56,168"/>
-        <Button x:Name="okToPay" Content="OK to Pay" HorizontalAlignment="Center" Margin="0,335,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Button x:Name="okToPay" Content="OK to Pay" HorizontalAlignment="Center" Margin="0,335,0,0" VerticalAlignment="Top" FontSize="20" Click="OkToPay_Click"/>
         <Label x:Name="cart" Content="Cart" HorizontalAlignment="Left" Margin="43,172,0,0" VerticalAlignment="Top" FontSize="20"/>
         <Label x:Name="totalSales1" Content="Total Sales" HorizontalAlignment="Left" Margin="43,332,0,0" VerticalAlignment="Top" FontSize="20"/>
         <TextBox x:Name="totalSales" HorizontalAlignment="Left" Margin="177,340,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="20"/>

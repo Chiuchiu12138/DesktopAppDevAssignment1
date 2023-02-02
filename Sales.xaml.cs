@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Xml.Linq;
+using System.Runtime.Remoting.Messaging;
 
 namespace DesktopAppDevAssignment_1
 {
@@ -54,15 +55,17 @@ namespace DesktopAppDevAssignment_1
                 DataContext = da;
 
                 //Display the cart total in Textbox
-                /*query = "SELECT sum(Expanded_Price) from cartTable";
+                query = "SELECT sum(KG_Cart*Price) from cartTable";
                 cmd = new SqlCommand(query, con);
-                cmd.Parameters.AddWithValue("@Total_Sales", float.Parse(totalSales.Text));
                 SqlDataReader sqlReader = cmd.ExecuteReader();
-                while (sqlReader.Read())
+                try
                 {
-                    totalSales.Text = (string)sqlReader.GetValue(0);
-                
-                }*/
+                    while (sqlReader.Read())
+                    {
+                        totalSales.Text = Convert.ToString(Math.Round(Convert.ToDecimal(sqlReader[0]), 2));
+                    }
+                }
+                catch { }      
                 con.Close();
             }
             catch (SqlException ex)
@@ -75,7 +78,7 @@ namespace DesktopAppDevAssignment_1
         {
             try
             { //Exception handling
-                string connectionString = "Data Source=DESKTOP-5DGA5O7\\SQLEXPRESS;Initial Catalog=DesptopAppDevAssignment1;Integrated Security=True";
+                string connectionString = "Data Source=DESKTOP-5DGA5O7\\SQLEXPRESS;Initial Catalog=DesptopAppDevAssignment1;Integrated Security=True;MultipleActiveResultSets=True";
                 con = new SqlConnection(connectionString);
                 con.Open();
                 MessageBox.Show("Connection Established Properly");
@@ -85,6 +88,32 @@ namespace DesktopAppDevAssignment_1
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void OkToPay_Click(object sender, RoutedEventArgs e)
+        {
+            con.Open();
+            string sql = "select * from cartTable";
+            SqlCommand command = new SqlCommand(sql, con);
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                string productID = Convert.ToString(reader["Product_ID"]);
+                int kg = (int)Convert.ToInt64(reader["KG_Cart"]);
+                string sqlquery1 = "UPDATE productTable SET KG_Inventory = KG_Inventory -" + kg + "where Product_ID =" + productID;
+                SqlCommand command1 = new SqlCommand(sqlquery1, con);
+                command1.ExecuteNonQuery();
+            }
+            string sqlquery2 = "DELETE cartTable";
+            SqlCommand command2 = new SqlCommand(sqlquery2, con);
+            command2.ExecuteNonQuery();
+
+            MessageBox.Show("Successfully paid");
+
+            con.Close();
+
+            viewCart_Click(sender, e);
+
         }
     }
 }

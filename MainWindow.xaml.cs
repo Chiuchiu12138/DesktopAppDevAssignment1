@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -64,6 +65,8 @@ namespace DesptopAppDevAssignment1
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Inserted perfectly into the database");
                 con.Close();
+
+                ViewData_Click(sender, e);
             }
             catch (SqlException ex)
             {
@@ -86,6 +89,8 @@ namespace DesptopAppDevAssignment1
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Updated perfectly into the database");
                 con.Close();
+
+                ViewData_Click(sender, e);
             }
             catch (SqlException ex)
             {
@@ -105,6 +110,8 @@ namespace DesptopAppDevAssignment1
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Deleted peoperly");
                 con.Close();
+
+                ViewData_Click(sender, e);
             }
             catch (SqlException ex)
             {
@@ -152,8 +159,21 @@ namespace DesptopAppDevAssignment1
                 cmd.Parameters.AddWithValue("@price", float.Parse(price.Text));
                 cmd.Parameters.AddWithValue("@amountKG", int.Parse(amountKG.Text));
 
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Added successfully to the cart");
+                /*string sql1 = "select KG_Inventory from productTable" ;
+                SqlCommand command1 = new SqlCommand(sql1, con);
+                SqlDataReader reader1 = command1.ExecuteReader();
+                reader1.Read();
+                int kgInventory = (int)Convert.ToInt64(reader1["product_ID"]);
+                int kgCart = int.Parse(amountKG.Text);
+
+                if (kgInventory >= kgCart)
+                {*/
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Added successfully to the cart");
+                /*}
+                else { 
+                    MessageBox.Show("Insufficient Inventory"); 
+                }*/
                 con.Close();
             }
             catch (SqlException ex)
