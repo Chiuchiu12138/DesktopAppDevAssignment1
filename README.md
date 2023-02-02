@@ -93,6 +93,6 @@ This will finalise the transaction with the customer, updating the remaining inv
 # Group Members
 Mayuga, Dennis
 
-Qui, Chaohao
+Qiu, Chaohao
 
 Magda, Alex
