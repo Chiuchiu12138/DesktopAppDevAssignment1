@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Xml.Linq;
+using System.ComponentModel.Design;
 
 namespace DesktopAppDevAssignment_1
 {
@@ -61,10 +62,16 @@ namespace DesktopAppDevAssignment_1
                 SqlCommand command = new SqlCommand(sql, con);
 
                 SqlDataReader reader = command.ExecuteReader();
-
-                while (reader.Read())
+                try
                 {
-                    totalSales.Text = Convert.ToString(Math.Round(Convert.ToDecimal(reader[0]), 2));
+                    while (reader.Read())
+                    {
+                        totalSales.Text = Convert.ToString(Math.Round(Convert.ToDecimal(reader[0]), 2));
+                    }
+                }
+                catch { }
+                {
+
                 }
 
                 //Display the cart total in Textbox
@@ -89,7 +96,7 @@ namespace DesktopAppDevAssignment_1
         {
             try
             { //Exception handling
-                string connectionString = "Data Source=DESKTOP-V50PKCU\\SQLEXPRESS;Initial Catalog=A1;Integrated Security=True";
+                string connectionString = "Data Source=DESKTOP-V50PKCU\\SQLEXPRESS;Initial Catalog=A1;Integrated Security=True;MultipleActiveResultSets=True";
                 con = new SqlConnection(connectionString);
                 con.Open();
                 MessageBox.Show("Connection Established Properly");
@@ -118,14 +125,24 @@ namespace DesktopAppDevAssignment_1
 
             while (reader.Read())
             {
+
                 string productName = Convert.ToString(reader["Product_Name"]);
                 int kg = (int)Convert.ToInt64(reader["KG"]);
-                string sqlquery = "UPDATE dbo.productTable SET KG = KG -" + kg+"where Product_Name ="+ "'" +productName+"'";
-                SqlCommand command2 = new SqlCommand(sqlquery, con);
-               
-            }
 
+                string sqlq = "UPDATE dbo.productTable SET KG = KG - " + kg + " where Product_Name = '" + productName.TrimEnd() + "'";
+
+    
+                SqlCommand command2 = new SqlCommand(sqlq, con);
+                command2.ExecuteNonQuery();
+                
+
+            }
+            MessageBox.Show("PURCHASED!");
+            string deleteSQL = "delete from cartTable";
+            SqlCommand command3 = new SqlCommand(deleteSQL, con);
+            command3.ExecuteNonQuery();
             con.Close();
+            viewCart_Click(sender, e);
 
 
 

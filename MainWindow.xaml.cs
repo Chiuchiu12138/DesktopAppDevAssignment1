@@ -76,7 +76,7 @@ namespace DesptopAppDevAssignment1
             try
             {
                 con.Open();
-                string query = "Update productTable set Product_Name = @productName,  Price = @price, KG_Inventory = @amountKG where Product_ID = @productID";
+                string query = "Update productTable set Product_Name = @productName,  Price = @price, KG = @amountKG where Product_ID = @productID";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@productID", int.Parse(@productID.Text));
                 cmd.Parameters.AddWithValue("@productName", productName.Text);
@@ -91,6 +91,7 @@ namespace DesptopAppDevAssignment1
             {
                 MessageBox.Show(ex.Message);
             }
+            ViewData_Click(sender, e);
         }
 
         private void Delect_Click(object sender, RoutedEventArgs e)
@@ -103,7 +104,7 @@ namespace DesptopAppDevAssignment1
                 cmd.Parameters.AddWithValue("@productID", int.Parse(productID.Text));
 
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Deleted peoperly");
+                MessageBox.Show("Deleted properly");
                 con.Close();
             }
             catch (SqlException ex)
