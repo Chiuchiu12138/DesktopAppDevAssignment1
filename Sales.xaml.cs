@@ -45,13 +45,27 @@ namespace DesktopAppDevAssignment_1
             {
                 //Display the cart content and expanded prices
                 con.Open();// First step is to open the SQL connection in your application
-                string query = "select * ,KG_Cart*Price AS Expanded_Price from cartTable";// Generate the database query
+                string query = "select *, KG*Price as calculatedPrice from dbo.cartTable";// Generate the database query
                 SqlCommand cmd = new SqlCommand(query, con);// Generate the SQL command query for the application
+
+
                 SqlDataAdapter da = new SqlDataAdapter(cmd);//Create a data adapter which will work as a bridge in between the front-end, datagrid and the back-end database.
                 DataTable dt = new DataTable();//We need a table view for our dataGrid. so we are creating the dataTable schema over here
                 da.Fill(dt);// We need to pass the datatable to the adapter
                 cartGrid.ItemsSource = dt.AsDataView();
                 DataContext = da;
+
+
+                string sql = "SELECT SUM(KG*PRICE) as value from dbo.cartTable";
+
+                SqlCommand command = new SqlCommand(sql, con);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    totalSales.Text = Convert.ToString(Math.Round(Convert.ToDecimal(reader[0]), 2));
+                }
 
                 //Display the cart total in Textbox
                 /*query = "SELECT sum(Expanded_Price) from cartTable";
@@ -75,7 +89,7 @@ namespace DesktopAppDevAssignment_1
         {
             try
             { //Exception handling
-                string connectionString = "Data Source=DESKTOP-5DGA5O7\\SQLEXPRESS;Initial Catalog=DesptopAppDevAssignment1;Integrated Security=True";
+                string connectionString = "Data Source=DESKTOP-V50PKCU\\SQLEXPRESS;Initial Catalog=A1;Integrated Security=True";
                 con = new SqlConnection(connectionString);
                 con.Open();
                 MessageBox.Show("Connection Established Properly");
@@ -85,6 +99,38 @@ namespace DesktopAppDevAssignment_1
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void cartGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void okToPay_Click(object sender, RoutedEventArgs e)
+        {
+            con.Open();
+
+            
+
+            string sql = "select * from dbo.cartTable";
+            SqlCommand command = new SqlCommand(sql, con);
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                string productName = Convert.ToString(reader["Product_Name"]);
+                int kg = (int)Convert.ToInt64(reader["KG"]);
+                string sqlquery = "UPDATE dbo.productTable SET KG = KG -" + kg+"where Product_Name ="+ "'" +productName+"'";
+                SqlCommand command2 = new SqlCommand(sqlquery, con);
+               
+            }
+
+            con.Close();
+
+
+
+
+
         }
     }
 }

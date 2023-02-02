@@ -35,7 +35,7 @@ namespace DesptopAppDevAssignment1
         {
             try
             { //Exception handling
-                string connectionString = "Data Source=DESKTOP-5DGA5O7\\SQLEXPRESS;Initial Catalog=DesptopAppDevAssignment1;Integrated Security=True";
+                string connectionString = "Data Source=DESKTOP-V50PKCU\\SQLEXPRESS;Initial Catalog=A1;Integrated Security=True";
                 con = new SqlConnection(connectionString);
                 con.Open();
                 MessageBox.Show("Connection Established Properly");
@@ -145,7 +145,7 @@ namespace DesptopAppDevAssignment1
             try
             {
                 con.Open();
-                string query = "Insert into cartTable values(@productID, @productName,  @price, @amountKG) "; //We need to call the textBox and then grab the text
+                string query = "Insert into cartTable values(@productID, @productName, @amountKG, @price) "; //We need to call the textBox and then grab the text
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@productID", int.Parse(productID.Text));
                 cmd.Parameters.AddWithValue("@productName", productName.Text);

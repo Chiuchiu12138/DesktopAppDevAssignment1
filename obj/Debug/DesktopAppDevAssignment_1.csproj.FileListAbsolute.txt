@@ -16,3 +16,21 @@ C:\Users\jklpp\OneDrive\Desktop\VS Workspace\DesktopAppDevAssignment_1\obj\Debug
 C:\Users\jklpp\OneDrive\Desktop\VS Workspace\DesktopAppDevAssignment_1\obj\Debug\DesktopAppDevAssignment_1.pdb
 C:\Users\jklpp\OneDrive\Desktop\VS Workspace\DesktopAppDevAssignment_1\obj\Debug\Sales.g.cs
 C:\Users\jklpp\OneDrive\Desktop\VS Workspace\DesktopAppDevAssignment_1\obj\Debug\Sales.baml
+C:\Users\-_-\source\repos\DesktopAppDevAssignment1\bin\Debug\DesktopAppDevAssignment_1.exe.config
+C:\Users\-_-\source\repos\DesktopAppDevAssignment1\bin\Debug\DesktopAppDevAssignment_1.exe
+C:\Users\-_-\source\repos\DesktopAppDevAssignment1\bin\Debug\DesktopAppDevAssignment_1.pdb
+C:\Users\-_-\source\repos\DesktopAppDevAssignment1\obj\Debug\DesktopAppDevAssignment_1.csproj.AssemblyReference.cache
+C:\Users\-_-\source\repos\DesktopAppDevAssignment1\obj\Debug\DesktopAppDevAssignment_1.csproj.SuggestedBindingRedirects.cache
+C:\Users\-_-\source\repos\DesktopAppDevAssignment1\obj\Debug\MainWindow.g.cs
+C:\Users\-_-\source\repos\DesktopAppDevAssignment1\obj\Debug\Sales.g.cs
+C:\Users\-_-\source\repos\DesktopAppDevAssignment1\obj\Debug\App.g.cs
+C:\Users\-_-\source\repos\DesktopAppDevAssignment1\obj\Debug\DesktopAppDevAssignment_1_MarkupCompile.cache
+C:\Users\-_-\source\repos\DesktopAppDevAssignment1\obj\Debug\DesktopAppDevAssignment_1_MarkupCompile.lref
+C:\Users\-_-\source\repos\DesktopAppDevAssignment1\obj\Debug\MainWindow.baml
+C:\Users\-_-\source\repos\DesktopAppDevAssignment1\obj\Debug\Sales.baml
+C:\Users\-_-\source\repos\DesktopAppDevAssignment1\obj\Debug\DesktopAppDevAssignment_1.g.resources
+C:\Users\-_-\source\repos\DesktopAppDevAssignment1\obj\Debug\DesktopAppDevAssignment_1.Properties.Resources.resources
+C:\Users\-_-\source\repos\DesktopAppDevAssignment1\obj\Debug\DesktopAppDevAssignment_1.csproj.GenerateResource.cache
+C:\Users\-_-\source\repos\DesktopAppDevAssignment1\obj\Debug\DesktopAppDevAssignment_1.csproj.CoreCompileInputs.cache
+C:\Users\-_-\source\repos\DesktopAppDevAssignment1\obj\Debug\DesktopAppDevAssignment_1.exe
+C:\Users\-_-\source\repos\DesktopAppDevAssignment1\obj\Debug\DesktopAppDevAssignment_1.pdb
