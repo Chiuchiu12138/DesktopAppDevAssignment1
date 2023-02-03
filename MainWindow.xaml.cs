@@ -36,11 +36,13 @@ namespace DesptopAppDevAssignment1
         {
             try
             { //Exception handling
-                string connectionString = "Data Source=DESKTOP-5DGA5O7\\SQLEXPRESS;Initial Catalog=DesptopAppDevAssignment1;Integrated Security=True";
+                string connectionString = "Data Source=DESKTOP-5DGA5O7\\SQLEXPRESS;Initial Catalog=DesptopAppDevAssignment1;Integrated Security=True;MultipleActiveResultSets=True";
                 con = new SqlConnection(connectionString);
                 con.Open();
                 MessageBox.Show("Connection Established Properly");
                 con.Close();
+
+                ViewData_Click(sender, e);
             }
             catch (SqlException ex)
             {
@@ -159,21 +161,21 @@ namespace DesptopAppDevAssignment1
                 cmd.Parameters.AddWithValue("@price", float.Parse(price.Text));
                 cmd.Parameters.AddWithValue("@amountKG", int.Parse(amountKG.Text));
 
-                /*string sql1 = "select KG_Inventory from productTable" ;
+                string sql1 = "select KG_Inventory from productTable where product_ID =" + int.Parse(productID.Text);
                 SqlCommand command1 = new SqlCommand(sql1, con);
                 SqlDataReader reader1 = command1.ExecuteReader();
                 reader1.Read();
-                int kgInventory = (int)Convert.ToInt64(reader1["product_ID"]);
+                int kgInventory = (int)Convert.ToInt64(reader1["KG_Inventory"]);
                 int kgCart = int.Parse(amountKG.Text);
 
                 if (kgInventory >= kgCart)
-                {*/
+                {
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Added successfully to the cart");
-                /*}
+                }
                 else { 
                     MessageBox.Show("Insufficient Inventory"); 
-                }*/
+                }
                 con.Close();
             }
             catch (SqlException ex)
