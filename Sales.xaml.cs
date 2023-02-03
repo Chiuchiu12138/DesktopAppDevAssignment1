@@ -83,6 +83,8 @@ namespace DesktopAppDevAssignment_1
                 con.Open();
                 MessageBox.Show("Connection Established Properly");
                 con.Close();
+
+                viewCart_Click(sender, e);
             }
             catch (SqlException ex)
             {
